@@ -4,9 +4,9 @@
 #Email: vanhuong.do@asicland.com
 #
 #git remote add origin https://github.com/dovanhuong/$1.git
-git init 
-git add .
-git commit -m "first release"
+#git init 
+#git add .
+#git commit -m "first release"
 git remote add origin https://github.com/dovanhuong/CustomBinding.git
 git branch -M main
 git pull

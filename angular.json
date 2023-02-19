@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CustomBinding"
+    }
+  },
+  "defaultProject": "CustomBinding",
+  "cli": {
+    "analytics": false
+  }
 }
