@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-courses',
@@ -20,7 +20,7 @@ export class CoursesComponent {
      description:'in this course you will learn the fundamentalsl of javascript.'},
      {id:106, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Free', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
      description:'in this course you will learn the fundamentalsl of javascript.'},
-     {id:107, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Free', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
+     {id:107, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Premium', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
      description:'in this course you will learn the fundamentalsl of javascript.'},
      {id:108, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Free', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
      description:'in this course you will learn the fundamentalsl of javascript.'},
@@ -28,9 +28,26 @@ export class CoursesComponent {
      description:'in this course you will learn the fundamentalsl of javascript.'},
      {id:110, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Free', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
      description:'in this course you will learn the fundamentalsl of javascript.'},
-     {id:111, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Free', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
+     {id:111, name:'JavaScript for beginers', author: 'John Heikela', duration: 48, type:'Premium', price: 0.00, rating:3.5, image:'assets/courses/course-image-1.jpeg',
      description:'in this course you will learn the fundamentalsl of javascript.'},
 
   ]
+  getTotalCourses(){
+    return this.courses.length;
+  }
+  getTotalFreeCourses(){
+    return this.courses.filter(course => course.type==='Free').length;
+  }
+  getTotalPremiumCourses(){
+    return this.courses.filter(course => course.type ==='Premium').length;
+  }
 
+
+  courseCountRadioButton: string = 'All';
+
+  onFilterRadioButtonChanged(data: string){
+    this.courseCountRadioButton = data;
+    console.log('checking: ', this.courseCountRadioButton);
+
+  }
 }

@@ -7,7 +7,7 @@
 #git init 
 #git add .
 #git commit -m "first release"
-git remote add origin https://github.com/dovanhuong/CustomBinding.git
+#git remote add origin https://github.com/dovanhuong/CustomBinding.git
 git branch -M main
 git pull
 git add .
